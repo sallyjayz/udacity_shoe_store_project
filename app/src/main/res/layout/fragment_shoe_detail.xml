@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoeDetailViewModel"
+            type="com.sallyjayz.shoestore.screens.shoedetail.ShoeDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.ShoeDetailFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/shoe_detail_heading"
+            style="@style/TextViewStyle"
+            android:layout_marginTop="@dimen/fortydp"
+            android:padding="@dimen/thirtydp"
+            android:text="@string/shoe_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoe_name"
+            style="@style/TextInputLayout"
+            android:hint="@string/shoe_name"
+            app:endIconContentDescription="@string/shoe_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_detail_heading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textCapWords"
+                android:text="@={shoeDetailViewModel.editableName}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoe_name"
+            style="@style/TextInputLayout"
+            android:hint="@string/shoe_name"
+            app:endIconContentDescription="@string/shoe_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_detail_heading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shoe_name_input"
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textCapWords"
+                android:text="@{shoeDetailViewModel.editableName}"
+                app:textwatcher="@{shoeDetailViewModel.nameTextWatcher}"/>
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/company"
+            style="@style/TextInputLayout"
+            android:hint="@string/company"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textCapWords"
+                android:text="@={shoeDetailViewModel.editableCompany}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoe_size"
+            style="@style/TextInputLayout"
+            android:hint="@string/shoe_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="numberDecimal"
+                android:text="@={shoeDetailViewModel.editableSize}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description"
+            style="@style/TextInputLayout"
+            android:hint="@string/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textCapWords"
+                android:text="@={shoeDetailViewModel.editableDescription}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel"
+            style="@style/Widget.App.Button"
+            android:onClick="@{()->shoeDetailViewModel.clear()}"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            style="@style/Widget.App.Button"
+            android:onClick="@{()->shoeDetailViewModel.save()}"
+            android:text="@string/save"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

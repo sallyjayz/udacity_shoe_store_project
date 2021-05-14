@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.LoginScreenFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/loginHeading"
+            style="@style/TextViewStyle"
+            android:text="@string/login"
+            android:padding="@dimen/thirtydp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_email"
+            style="@style/TextInputLayout"
+            android:hint="@string/email"
+            app:endIconContentDescription="@string/email_icon"
+            app:endIconDrawable="@drawable/ic_email"
+            app:endIconMode="custom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginHeading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_password"
+            style="@style/TextInputLayout"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputLayoutEdit"
+                android:inputType="textWebPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/new_login_btn"
+            style="@style/Widget.App.Button"
+            android:text="@string/new_login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_password" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/existing_login_btn"
+            style="@style/Widget.App.Button"
+            android:text="@string/existing_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

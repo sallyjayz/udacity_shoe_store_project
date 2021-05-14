@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="email_icon">Email icon</string>
+    <string name="new_login">New Login</string>
+    <string name="existing_account">Existing Account</string>
+    <string name="start_shopping">Start Shopping</string>
+    <string name="our_store_provides_the_best_affordable_shoes">Our store provides quality shoes at an affordable price</string>
+    <string name="happy_feet">Happy Feet 👞</string>
+    <string name="instruction">Instructions</string>
+    <string name="instruction_detail">👉 Click on the plus button to view details \n\n👉 Enjoy shopping</string>
+    <string name="shoe_image">shoe image</string>
+    <string name="shoe_detail">Shoe Detail</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
+    <string name="shoe">Shoes</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="nameInput">Name: %1$s</string>
+    <string name="sizeInput">Size: %1$f</string>
+    <string name="companyInput">Company: %1$s</string>
+    <string name="descInput">Description: %1$s</string>
+
+
+</resources>
